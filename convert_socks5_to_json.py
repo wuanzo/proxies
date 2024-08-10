@@ -13,6 +13,7 @@ def parse_proxy_line(line):
             "port": int(port)
         }
     except ValueError:
+        print(f"Skipping invalid line: {line.strip()}")
         return None
 
 def main():
